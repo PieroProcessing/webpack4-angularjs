@@ -34,15 +34,15 @@ const dependencies = [
 var ngModule = angular.module('webpack4.angularjs', dependencies);
 
 // app structure
-require('./directives')(ngModule);
-require('./services')(ngModule);
-require('./factory')(ngModule);
-require('./controllers')(ngModule);
-require('./filters')(ngModule);
+// require('./directives')(ngModule);
+// require('./services')(ngModule);
+// require('./factory')(ngModule);
+// require('./controllers')(ngModule);
+// require('./filters')(ngModule);
 
 
 // config
 require('./app.config')(ngModule);
 // translations
-require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
+// require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
 // routing
