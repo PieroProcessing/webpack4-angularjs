@@ -18,6 +18,10 @@ var _ = require('lodash');
 
 // external library non-Angularjs
  
+// modules injection
+// import './modules/auth/auth.module';
+// import './modules/dashboard/dashboard.module';
+
 // dependencies
 const dependencies = [
     
@@ -28,6 +32,8 @@ const dependencies = [
     'gettext',
     
     // app structure
+    // 'Auth',
+    // 'Dashboard'
 ];
 
 
@@ -36,7 +42,7 @@ var ngModule = angular.module('webpack4.angularjs', dependencies);
 // app structure
 // require('./directives')(ngModule);
 // require('./services')(ngModule);
-// require('./factory')(ngModule);
+require('./factories')(ngModule);
 // require('./controllers')(ngModule);
 // require('./filters')(ngModule);
 
@@ -47,4 +53,5 @@ require('./app.config')(ngModule);
 // require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
 // routing
 require('./modules/auth/auth.routing')(ngModule);
-require('./modules/dashboard.routing')(ngModule);
+require('./modules/dashboard/dashboard.routing')(ngModule);
+require('./modules/content/content.router')(ngModule);

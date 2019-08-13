@@ -5,8 +5,8 @@ function config( $ocLazyLoadProvider, $urlRouterProvider) {
 
     $ocLazyLoadProvider.config({
         // Set to true if you want to see what and when is dynamically loaded
-        debug: false,
-        events: false,
+        debug: true,
+        events: true,
     });
 
     //states of app
