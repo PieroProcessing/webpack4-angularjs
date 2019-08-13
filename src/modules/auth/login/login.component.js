@@ -4,6 +4,7 @@ const login = {
     name: 'login',
     template: require('./login.view.html'),
     controller: LoginController,
-    controllerAs: 'login',
+    controllerAs: 'loginCtrl',
 }
+
 export {login}

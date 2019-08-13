@@ -3,11 +3,11 @@ function loginRoute($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('login', {
             url: "/login",
-            template: require('./login/login.view.html'),
+            component: 'login',
             lazyLoad: ($transition$) => {
                 const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
 
-                return import(/* webpackChunkName: "auth-module" */ "./authentication.module")
+                return import(/* webpackChunkName: "auth-module" */ "./auth.module")
                     .then(mod => $ocLazyLoad.load(mod.AUTH_MODULE))
                     .catch(err => {
                         throw new Error("Ooops, something went wrong, " + err);

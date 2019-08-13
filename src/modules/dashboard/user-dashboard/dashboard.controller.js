@@ -1,4 +1,4 @@
-function UserDashboardController() {
+function UserDashboardController($element) {
     var self = this;
     //var
     
@@ -9,6 +9,6 @@ function UserDashboardController() {
         $element.addClass('grid-dashboard');
       };
 }
-UserDashboardController.$inject = [];
+UserDashboardController.$inject = ['$element'];
 
 export {UserDashboardController}
