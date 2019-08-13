@@ -46,3 +46,5 @@ require('./app.config')(ngModule);
 // translations
 // require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
 // routing
+require('./modules/auth/auth.routing')(ngModule);
+require('./modules/dashboard.routing')(ngModule);
