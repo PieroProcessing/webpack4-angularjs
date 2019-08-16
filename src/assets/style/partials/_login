@@ -1,8 +1,0 @@
-.login{
-    &-wrapper{
-        grid-area: login
-    }
-    &-title{
-        margin: 1em auto;
-    }
-}

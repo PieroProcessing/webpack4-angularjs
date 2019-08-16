@@ -1,8 +1,40 @@
-.grid-auth{
+.grid {
+  &-auth {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: ". . ." ". login ." ". . .";
     width: 100vw;
     height: 100vh;
+  }
+  @media (max-width: 780px) {
+    &-auth {
+      grid-template-columns: 2fr 3fr 2fr;
+    }
+  }
+  @media (max-width: 411px) {
+    &-auth {
+      grid-template-columns: 1fr;
+      grid-template-areas:"." "login" ".";
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+  }
+  &-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    &_main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(120px, 1fr) 7fr 64px;
+      // height: 100vh;
+    }
+  }
+  &-display {
+    &_card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 1em;
+    }
+  }
 }

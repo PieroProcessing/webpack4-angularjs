@@ -1,0 +1,43 @@
+// Basic button styles
+.btn {
+  cursor: pointer;
+  border-radius: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 16px;
+  box-shadow: 0 1px 2px black(0.1), inset 0 1px 0 white(0.15), inset 0 -1px 0 black(0.15);
+  //   font: bold 14px "Helvetica Neue", Helvetica, sans-serif;
+  white-space: nowrap;
+
+  &:active,
+  &.active {
+    outline: none;
+    position: relative;
+    top: 1px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Button mixin
+@mixin button-color($color) {
+}
+
+.btn {
+  @each $name, $color in $colors {
+    // check type-of before
+    &-#{$name} {
+      @if (type-of($color) == "color") {
+        color: lighten($color, 50%);
+        background-color: $color;
+        border: 1px solid $color;
+        &:hover,
+        &:active,
+        .active {
+          background-color: saturate($color, 45%);
+          border: 1px solid darken($color, 8%);
+        }
+      }
+    }
+  }
+}

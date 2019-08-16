@@ -1,0 +1,27 @@
+.login{
+    &-wrapper{
+        grid-area: login;
+        // box-shadow: 3px 3px 1em 0.5em rgb(58, 64, 70);
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 1em;
+        & .form-group{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            & .form-container{
+                margin: .5em 0;
+                & .form-error{
+                    margin-top: .5em;
+                    font-size: .8em;
+                }
+            }
+            & .form-submit{
+                margin: .5em auto;
+            }
+        }
+    }
+    &-title{
+        margin: 1em auto;
+    }
+}

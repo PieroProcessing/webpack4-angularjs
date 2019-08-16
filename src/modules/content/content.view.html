@@ -1,3 +1,10 @@
-<div>
-    this is a view
-</div>
+<section class="grid-display_card">
+  <div class="card" ng-repeat="item in contentCtrl.listItems">
+    <img ng-src="{{item.avatar}}" class="card-img" alt="card avatar">
+    <div class="card-body">
+      <h5 class="card-title">{{item.first_name}}' '{{item.last_name}} </h5>
+      <p class="card-text">{{item.email}}</p>
+      <a ng-click="contentCtrl.showSingleItem(id)" class="btn btn-primary">Get More Info</a>
+    </div>
+  </div>
+</section>
