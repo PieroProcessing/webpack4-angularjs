@@ -1,0 +1,12 @@
+#animations {
+    &-ui-view {
+      &.ng-enter {
+        transition: 350ms linear all;
+        opacity: 0;
+  
+        &.ng-enter-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
