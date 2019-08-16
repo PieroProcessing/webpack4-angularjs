@@ -1,4 +1,4 @@
-function LoginController (stateFactory, authService){
+function LoginController (stateFactory, authService, $cookies){
     var self = this;
     // variable
     self.user = {
@@ -7,13 +7,12 @@ function LoginController (stateFactory, authService){
     };
 
     // functions
-    self.goTo = goTo;
     self.submit = submit;
 
 
     // declarations
     function goTo (state){
-        console.log('state', state);
+        // console.log('state', state);
         stateFactory.goTo(state)
     }
     function submit(formData){
@@ -21,8 +20,9 @@ function LoginController (stateFactory, authService){
         // console.log('self.user', self.user)
         authService.login(formData).then(
             function success(response) {
-                console.log('logged in ',response);
-                stateFactory.goTo('dashboard.content');
+                // console.log('logged in ',response);
+                // console.log('$cookies at api service loaded', $cookies.getAll())
+                goTo('dashboard.content');
             },
             function error(error) {
                 console.log('error', error)
@@ -32,6 +32,6 @@ function LoginController (stateFactory, authService){
     }
 }
 
-LoginController.$inject = ['stateFactory','authService'];
+LoginController.$inject = ['stateFactory','authService', '$cookies'];
 
 export {LoginController}

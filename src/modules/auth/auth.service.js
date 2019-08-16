@@ -17,8 +17,8 @@ function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory) {
             method = args.method || "GET",
             data = args.data || {};
 
-            // console.log(url);
-            // console.log(data);
+        // console.log(url);
+        // console.log(data);
         // Fire the request, as configured.
         $http({
             url: url,
@@ -28,6 +28,7 @@ function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory) {
             data: data
         }).then(
             function success(response) {
+                console.log('request', response);
                 deferred.resolve(response.data, response.status);
             },
             function error(response) {
@@ -68,15 +69,16 @@ function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory) {
             }
         }).then(
             function success(data) {
-                if (!self.use_session) {
-                    $cookies.remove("token");
-                    $http.defaults.headers.common.Authorization = 'Token ' + data.key;
-                    $cookies.token = data.key;
-                    $cookies.put("token", data.key);
-                }
+                // console.log('on login service auth', data);
+                $cookies.remove("token");
+                $http.defaults.headers.common.Authorization = 'Token ' + data.token;
+                $cookies.token = data.token;
+                $cookies.put("token", data.token);
                 self.authenticated = true;
                 // $rootScope.$broadcast("self..logged_in", data);
+                // console.log('$cookies at api service loaded', $cookies.getAll())
                 deferred.resolve(data);
+              
             },
             function error(error) {   // On failure
                 deferred.reject(error);

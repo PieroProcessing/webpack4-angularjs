@@ -2,7 +2,7 @@ function apiService(API_ROOT, $q, $http, $location, stateFactory, $cookies) {
     var self = this;
 
     var token = null;
-
+ 
     var service = {
         get: get,
         post: post,
@@ -35,8 +35,10 @@ function apiService(API_ROOT, $q, $http, $location, stateFactory, $cookies) {
         return deferred.promise;
     }
     function init() {
+        // console.log('$cookies at api service loaded', $cookies.getAll())
         if (!$cookies.get('token')) $location.path('/');
         else token = "Token " + $cookies.get('token');
+        // console.log('token', token);
     }
     function post() {
         init();
