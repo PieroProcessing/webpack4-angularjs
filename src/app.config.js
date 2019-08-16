@@ -32,7 +32,7 @@ states.$inject = ['$rootScope', '$state', 'gettextCatalog', ];
 module.exports = function (ngModule) {
     ngModule
         .config(config)
-        .constant('API_ROOT', '')
+        .constant('API_ROOT', 'https://reqres.in/api/')
         .value('TITLE_APP', 'Webpack 4 - Angularjs')
         .run(states)
 };

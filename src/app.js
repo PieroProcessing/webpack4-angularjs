@@ -4,6 +4,8 @@
 
 // angularjs
 var angular = require('angular');
+var ngSanitize = require('angular-sanitize');
+var ngCookies = require('angular-cookies');
 var ngAnimate = require('angular-animate'); 
   
 // states
@@ -27,7 +29,9 @@ const dependencies = [
     
     // libraries
     uiroute,
-    lazyLoad,
+    lazyLoad, 
+    ngSanitize,
+    ngCookies,
     ngAnimate,
     'gettext',
     
@@ -41,7 +45,7 @@ var ngModule = angular.module('webpack4.angularjs', dependencies);
 
 // app structure
 // require('./directives')(ngModule);
-// require('./services')(ngModule);
+require('./services')(ngModule);
 require('./factories')(ngModule);
 // require('./controllers')(ngModule);
 // require('./filters')(ngModule);
