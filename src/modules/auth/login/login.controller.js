@@ -2,8 +2,8 @@ function LoginController (stateFactory, authService){
     var self = this;
     // variable
     self.user = {
-        email: 'eve.holt@reqres.in',
-        password: 'pistol'
+        email: null, // 'eve.holt@reqres.in'
+        password: null, // 'pistol'
     };
 
     // functions
