@@ -1,14 +1,14 @@
 .menu {
   &-container {
     grid-row: 2/3;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
   }
   &-list {
     &-container {
-      display: flex;
-      margin: 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      justify-items: center;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     &-item {
       margin: 0 1em;

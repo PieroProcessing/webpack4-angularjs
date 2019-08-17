@@ -22,7 +22,7 @@ function LoginController (stateFactory, authService, $cookies){
             function success(response) {
                 // console.log('logged in ',response);
                 // console.log('$cookies at api service loaded', $cookies.getAll())
-                goTo('dashboard.content');
+                goTo('dashboard.users');
             },
             function error(error) {
                 console.log('error', error)

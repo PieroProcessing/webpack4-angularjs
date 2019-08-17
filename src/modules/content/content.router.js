@@ -3,7 +3,20 @@ function contentRoute($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('dashboard.content', {
             url: 'content/',
-            component: 'contentComponent',
+            template: '<content-component template="colors"></content-component>',
+            lazyLoad: ($transition$) => {
+                const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
+
+                return import(/* webpackChunkName: "content-module" */ "./content.module")
+                    .then(mod => {$ocLazyLoad.load(mod.CONTENT_MODULE)})
+                    .catch(err => {
+                        throw new Error("Ooops, something went wrong, " + err);
+                    });
+            }
+        })
+        .state('dashboard.users', {
+            url: 'users/',
+            template: '<content-component template="users"></content-component>',
             lazyLoad: ($transition$) => {
                 const $ocLazyLoad = $transition$.injector().get("$ocLazyLoad");
 

@@ -48,7 +48,7 @@ var ngModule = angular.module('webpack4.angularjs', dependencies);
 // require('./directives')(ngModule);
 require('./services')(ngModule);
 require('./factories')(ngModule);
-// require('./controllers')(ngModule);
+// require('./components')(ngModule);
 // require('./filters')(ngModule);
 
 

@@ -6,7 +6,7 @@ function topbarController(stateFactory, $element) {
 
     // life cycle
     self.$onInit = () => {
-        $element.addClass('grid-topbar bg-secondary');
+        $element.addClass('grid-topbar');
     }
     self.$onChanges = (obj) => {
     }

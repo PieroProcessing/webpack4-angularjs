@@ -1,8 +1,10 @@
-function ContentController (Api){
+function ContentController (Api, $element){
     var self = this;
     console.log('controller called')
     // variables
     self.listItems = [];
+    self.isSelected = true;
+    self.selectedItem = {};
 
     // functions
     self.getInitData = getInitData;
@@ -10,6 +12,7 @@ function ContentController (Api){
 
     // life cycle
     self.$onInit = function () {
+        $element.addClass('grid-dashboard_main');
         getInitData();
     }
     self.$onChanges = function (obj) {
@@ -20,7 +23,8 @@ function ContentController (Api){
     }
     // declarations
     function getInitData() {
-        Api.get('users?per_page=9').then(
+        var endpoint = (self.template == 'users')? 'users': 'unknown';
+        Api.get(endpoint + '?per_page=9').then(
             function success(response) {
                 self.listItems = response.data;
                 console.log('response', response)
@@ -31,11 +35,13 @@ function ContentController (Api){
         )
     }
 
-    function showSingleItem(id) {
-        console.log('show single item: ', id);
+    function showSingleItem(item) {
+        console.log('show single item: ', item);
+        self.isSelected = !self.isSelected;
+        self.selectedItem = item
     }
 }
 
-ContentController.$inject = ['Api'];
+ContentController.$inject = ['Api', '$element'];
 
 export {ContentController}
