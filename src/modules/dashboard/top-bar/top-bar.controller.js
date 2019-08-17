@@ -1,4 +1,4 @@
-function topbarController(stateFactory) {
+function topbarController(stateFactory, $element) {
     var self = this;
 
     //functions
@@ -6,6 +6,7 @@ function topbarController(stateFactory) {
 
     // life cycle
     self.$onInit = () => {
+        $element.addClass('grid-topbar bg-secondary');
     }
     self.$onChanges = (obj) => {
     }
@@ -19,6 +20,6 @@ function topbarController(stateFactory) {
     }
 }
 
-topbarController.$inject = ['stateFactory'];
+topbarController.$inject = ['stateFactory', '$element'];
 
 export { topbarController }

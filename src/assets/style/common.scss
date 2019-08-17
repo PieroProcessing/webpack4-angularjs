@@ -1,9 +1,14 @@
+// base styling
 @import './partials/reset';
 @import './partials/mixins';
 @import './partials/colors';
-@import './partials/input';
-@import './partials/grid';
-@import './partials/login';
-@import './partials/btn';
 @import './partials/animations';
+@import './partials/grid';
+// base elements
+@import './partials/input';
+@import './partials/btn';
+// functional component
+@import './partials/login';
+@import './partials/menu';
+
 

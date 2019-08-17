@@ -18,6 +18,11 @@
       padding: 1em;
     }
   }
+  &-topbar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   &-display {
     &_card {
       display: grid;

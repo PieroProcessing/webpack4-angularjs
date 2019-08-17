@@ -1,6 +1,11 @@
-<nav>
-    <ul>
-        <li ng-click="topbarCtrl.goTo('dashboard.content')"><a href="">{{'Content' | translate}}</a></li>
-        <li ng-click="topbarCtrl.goTo('dashboard.users')"><a href="">{{'Users' | translate}}</a></li>
+<nav class="menu-container">
+    <ul class="menu-list-container">
+        <li class="menu-list-item" ng-click="topbarCtrl.goTo('dashboard.content')"><a href=""><i
+                    class="far fa-id-card menu-list-icon"></i>{{'Content' | translate}}</a></li>
+        <li class="menu-list-item" ng-click="topbarCtrl.goTo('dashboard.users')"><a href=""><i
+                    class="fas fa-users menu-list-icon"></i>{{'Users' | translate}}</a></li>
     </ul>
+    <section class="menu-list-container">
+            <a href=""><i class="fas fa-bars"></i></a>
+    </section>
 </nav>
