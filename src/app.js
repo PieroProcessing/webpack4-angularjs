@@ -1,5 +1,6 @@
 // css resources
- import './assets/style/common.scss';
+import '@fortawesome/fontawesome-free/js/all';
+import './assets/style/common.scss';
 
 
 // angularjs
