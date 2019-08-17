@@ -20,7 +20,7 @@ function ContentController (Api){
     }
     // declarations
     function getInitData() {
-        Api.get('users?per_page=10').then(
+        Api.get('users?per_page=9').then(
             function success(response) {
                 self.listItems = response.data;
                 console.log('response', response)
