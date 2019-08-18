@@ -1,16 +1,5 @@
-<section class="grid-display_mondrian">
-    <div class="card" 
-         ng-repeat="item in cardCtrl.itemList" 
-         ng-init="cardCtrl.getRandomNumber(80,512)" 
-         ng-style="cardCtrl.getRandomStyle(item.color, $index)">
-        <div class="card-body" style="display: flex; text-align: center" ng-style="cardCtrl.getSpan($index)">
-            <div style="margin: auto">
-                    <h2 class="card-title">{{item.name}}</h2>
-            <h4 class="card-subtitle">code: {{item.pantone_value}}</h4>
-            <h6 class="card-text">{{item.year}}</h6>
-            </div>
-        
-                <!-- <a ng-click="cardCtrl.showSingleItem(item)" class="btn btn-primary">Get More Info</a> -->
-        </div>
-    </div>
-</section>
+<ul class="card grid-display_mondrian">
+    <li class="card-item" ng-style="cardCtrl.getColor($index)" ng-repeat="item in cardCtrl.itemList track by $index">
+        <a class="card-link text-white" ng-click="cardCtrl.showSingleItem(item)">{{item.name}}</a>
+    </li>
+</ul>

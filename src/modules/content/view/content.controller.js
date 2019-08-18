@@ -1,9 +1,11 @@
-function ContentController (Api, $element){
+function ContentController(contentService, $element /*, resolveList*/) {
     var self = this;
-    console.log('controller called')
+
     // variables
-    self.listItems = [];
-    self.isSelected = true;
+    self.listItems = [];//resolveList.data;
+    // console.log('resolveList', self.listItems);
+
+    self.isSelected = false;
     self.selectedItem = {};
 
     // functions
@@ -23,8 +25,8 @@ function ContentController (Api, $element){
     }
     // declarations
     function getInitData() {
-        var endpoint = (self.template == 'users')? 'users': 'unknown';
-        Api.get(endpoint + '?per_page=9').then(
+        var call = (self.template == 'users') ? contentService.getUsers() : contentService.getColors();
+        call.then(
             function success(response) {
                 self.listItems = response.data;
                 console.log('response', response)
@@ -42,6 +44,15 @@ function ContentController (Api, $element){
     }
 }
 
-ContentController.$inject = ['Api', '$element'];
+ContentController.$inject = ['contentService', '$element'/*, 'resolveList'*/];
 
-export {ContentController}
+// ContentController.resolve = {
+//     resolveList: ['contentService', '$location', (contentService, $location) => {
+//         var template = $location.path().replace(/\//g, "");
+//         console.log('template', template)
+//         var call = (template == 'users') ? contentService.getUsers() : contentService.getColors();
+//         console.log('list', call);
+//         return call;
+//     }]
+// }
+export { ContentController }
