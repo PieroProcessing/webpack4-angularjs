@@ -1,18 +1,16 @@
 <nav class="menu-container">
     <ul class="menu-list-container">
         <b class="bg-secondary " style="height:42px; width:120px;transform: skew(20deg)"></b>
-        <li class="menu-list-item" ng-click="topbarCtrl.goTo('dashboard.content')"><a href=""><i
-                    class="far fa-id-card menu-list-icon"></i>{{'Colors' | translate}}</a></li>
-        <li class="menu-list-item" ng-click="topbarCtrl.goTo('dashboard.users')"><a href=""><i
-                    class="fas fa-users menu-list-icon"></i>{{'Users' | translate}}</a></li>
+        <li class="menu-list-item_btn" ng-click="topbarCtrl.goTo('dashboard.content')">
+            <a class="text-white"><i class="far fa-id-card menu-list-icon"></i>{{'Colors' | translate}}</a>
+        </li>
+        <li class="menu-list-item_btn" ng-click="topbarCtrl.goTo('dashboard.users')">
+            <a class="text-white"><i class="fas fa-users menu-list-icon"></i>{{'Users' | translate}}</a></li>
+        <li class="menu-list-item" ng-click="topbarCtrl.logout()">
+            <a class="text-secondary"><i class="fas fa-sign-out-alt"></i> {{'Log out' | translate}}</a>
+        </li>
     </ul>
-    <!-- <div class="shape-triangle" style=" shape-outside: polygon(0 0, 0 200px, 200px 300px);
-    width: 300px;
-    height: 200px;
-    float: left;
-    opacity: .2;"></div> -->
+    <div>
 
-    <!-- <section class="menu-list-container">
-            <a href=""><i class="fas fa-bars"></i></a>
-    </section> -->
+    </div>
 </nav>

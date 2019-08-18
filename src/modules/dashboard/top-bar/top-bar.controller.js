@@ -1,8 +1,9 @@
-function topbarController(stateFactory, $element) {
+function topbarController(stateFactory, $element, authService) {
     var self = this;
 
     //functions
     self.goTo = goTo;
+    self.logout = logout;
 
     // life cycle
     self.$onInit = () => {
@@ -15,11 +16,14 @@ function topbarController(stateFactory, $element) {
     self.$postLink = () => {
     }
     //declarations
-    function goTo(state){
+    function logout() {
+        authService.logout();
+    }
+    function goTo(state) {
         stateFactory.goTo(state);
     }
 }
 
-topbarController.$inject = ['stateFactory', '$element'];
+topbarController.$inject = ['stateFactory', '$element', 'authService'];
 
 export { topbarController }
