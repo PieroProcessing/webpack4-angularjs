@@ -1,7 +1,7 @@
 #animations {
     &-ui-view {
       &.ng-enter {
-        transition: 350ms linear all;
+        transition: 1.5s ease-in-out all;
         opacity: 0;
   
         &.ng-enter-active {

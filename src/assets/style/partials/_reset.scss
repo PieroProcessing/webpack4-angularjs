@@ -18,10 +18,14 @@ html {
   }
   a, i{
     text-decoration: none;
-    color: white;
+    color: map-get($map: $colors, $key: primary );
     font-size: 1.3em;
+    cursor: pointer;
   }
   img {
     display: block;
     width: 100%;
   }
+ a:hover,a:active{
+    color: lighten(map-get($map:$colors, $key: primary),20%)
+ }

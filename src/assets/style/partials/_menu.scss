@@ -13,9 +13,11 @@
     &-item {
       margin: 0 1em;
       padding: 0.5em;
-      border: 1px solid grey;
-      @extend .btn;
-      @extend .btn-primary;
+      &_btn {
+        border: 1px solid grey;
+        @extend .btn;
+        @extend .btn-primary;
+      }
     }
     &-icon {
       margin-right: 1em;
