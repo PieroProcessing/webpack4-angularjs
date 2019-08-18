@@ -59,4 +59,6 @@ require('./app.config')(ngModule);
 // routing
 require('./modules/auth/auth.routing')(ngModule);
 require('./modules/dashboard/dashboard.routing')(ngModule);
-require('./modules/content/content.router')(ngModule);
+// require('./modules/content/content.router')(ngModule);
+import {contentRoute} from './modules/content/content.router';
+ngModule.config(contentRoute);

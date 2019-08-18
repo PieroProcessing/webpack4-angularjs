@@ -1,7 +1,8 @@
-function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory) {
+function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory, $location) {
     var self = this;
 
     self.login = login;
+    self.logout = logout;
 
     function request(args) {
         // Let's retrieve the token from the cookie, if available
@@ -78,15 +79,22 @@ function authService(API_ROOT, $cookies, $state, $q, $http, stateFactory) {
                 // $rootScope.$broadcast("self..logged_in", data);
                 // console.log('$cookies at api service loaded', $cookies.getAll())
                 deferred.resolve(data);
-              
+
             },
             function error(error) {   // On failure
                 deferred.reject(error);
             }
         );
         return deferred.promise;
-
+    }
+    function logout() {
+        console.log('logout')
+        // delete $http.defaults.headers.common.Authorization;
+        // delete $cookies.token;
+        // $cookies.remove("token");
+        // self.authenticated = false;
+        $location.path('/');
     }
 }
-authService.$inject = ['API_ROOT', '$cookies', '$state', '$q', '$http', 'stateFactory'];
+authService.$inject = ['API_ROOT', '$cookies', '$state', '$q', '$http', 'stateFactory', '$location'];
 export { authService }

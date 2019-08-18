@@ -6,6 +6,7 @@ function stateFactory ($state){
     return service;
 
     function goTo (state,obj) {
+        console.log(state)
         $state.go(state, obj);
     }
     function getState() {
