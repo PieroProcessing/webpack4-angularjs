@@ -1,12 +1,20 @@
+// route animation
 #animations {
-    &-ui-view {
-      &.ng-enter {
-        transition: 1.5s ease-in-out all;
-        opacity: 0;
-  
-        &.ng-enter-active {
-          opacity: 1;
-        }
+  &-ui-view {
+    &.ng-enter {
+      transition: 1.5s ease-in-out all;
+      opacity: 0;
+
+      &.ng-enter-active {
+        opacity: 1;
       }
     }
   }
+}
+.collapse {
+  transition: opacity 0.1s ease-out;
+  opacity: 0;
+}
+.expand {
+  opacity: 1;
+}

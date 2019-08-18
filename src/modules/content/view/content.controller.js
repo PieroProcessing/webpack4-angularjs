@@ -6,11 +6,12 @@ function ContentController(contentService, $element /*, resolveList*/) {
     // console.log('resolveList', self.listItems);
 
     self.isSelected = false;
-    self.selectedItem = {};
+    self.selectedItem = null;
 
     // functions
     self.getInitData = getInitData;
     self.showSingleItem = showSingleItem;
+    self.isUser = isUser;
 
     // life cycle
     self.$onInit = function () {
@@ -36,11 +37,23 @@ function ContentController(contentService, $element /*, resolveList*/) {
             }
         )
     }
-
+    function isUser() {
+        return self.template == 'users';
+    }
     function showSingleItem(item) {
         console.log('show single item: ', item);
+     
         self.isSelected = !self.isSelected;
-        self.selectedItem = item
+        if(self.isSelected){
+            $element.addClass('grid-expanded');
+            $element.removeClass('grid-collapse');
+            self.selectedItem = item
+        }else{    
+            $element.addClass('grid-collapse');
+            $element.removeClass('grid-expanded');
+            self.selectedItem = null;
+        }
+     
     }
 }
 

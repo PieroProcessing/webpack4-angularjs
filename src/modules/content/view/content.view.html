@@ -1,0 +1,7 @@
+<card template='users' ng-if="contentCtrl.isUser()" is-selected="contentCtrl.showSingleItem(item)"
+  item-list="contentCtrl.listItems"></card>
+<card template='mondrian' ng-if="!contentCtrl.isUser()" is-selected="contentCtrl.showSingleItem(item)"
+  item-list="contentCtrl.listItems"></card>
+<aside>
+  <side-view class="grid-sideview bg-success" ng-class="{'collapse': !contentCtrl.isSelected, 'expand': contentCtrl.isSelected}">this is item selected</side-view>
+</aside>
