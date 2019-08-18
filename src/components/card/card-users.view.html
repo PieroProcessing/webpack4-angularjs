@@ -2,7 +2,7 @@
     <div class="card" ng-repeat="item in cardCtrl.itemList">
         <img ng-src="{{item.avatar}}" class="card-img" alt="card avatar">
         <div class="card-link_users">
-            <a ng-click="cardCtrl.showSingleItem(item)" class="btn btn-primary">Get More Info</a>
+            <a ng-click="cardCtrl.showSingleItem(item)" class="btn btn-primary">{{'Get More Info' | translate}}</a>
         </div>
     </div>
     </div>

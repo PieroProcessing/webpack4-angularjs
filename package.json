@@ -8,7 +8,7 @@
     "build:prod": "webpack -p",
     "start": "webpack-dev-server",
     "extract": "angular-gettext-cli --files './src/**/*.+(js|html)' --exclude './src/assets/*' --dest './src/assets/l10n/extract.pot'",
-    "compile": "angular-gettext-cli --compile --files 'src/assets/l10n/po/*.po' --dest 'src/assets/l10n/translations.js' --format javascript --module arm23"
+    "compile": "angular-gettext-cli --compile --files 'src/assets/l10n/po/*.po' --dest 'src/assets/l10n/translations.js' --format javascript --module webpack4.angularjs"
   },
   "repository": {
     "type": "git",

@@ -55,10 +55,11 @@ require('./factories')(ngModule);
 // config
 require('./app.config')(ngModule);
 // translations
-// require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
+require(/* webpackChunkName: "translations" */'./assets/l10n/translations');
 // routing
 require('./modules/auth/auth.routing')(ngModule);
 require('./modules/dashboard/dashboard.routing')(ngModule);
+
 // require('./modules/content/content.router')(ngModule);
 import {contentRoute} from './modules/content/content.router';
 ngModule.config(contentRoute);

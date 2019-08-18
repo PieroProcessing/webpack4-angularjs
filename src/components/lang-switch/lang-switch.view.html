@@ -1,0 +1,7 @@
+<div>
+    <select class="select-lang" ng-model='lsCtrl.selectedLang' ng-change='lsCtrl.switchLang()'>
+        <option value="{{lsCtrl.selectedLang}}">{{lsCtrl.selectedLang}}</option>
+        <option ng-repeat="lang in lsCtrl.languages" ng-if="lsCtrl.selectedLang != lang" value="{{lang}}">{{lang}}
+        </option>
+    </select>
+</div>

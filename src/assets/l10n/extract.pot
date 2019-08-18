@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: ./src/modules/dashboard/top-bar/top-bar.view.html:5
+msgid "Colors"
+msgstr ""
+
+#: ./src/modules/dashboard/top-bar/top-bar.view.html:10
+msgid "Log out"
+msgstr ""
+
+#: ./src/modules/dashboard/top-bar/top-bar.view.html:8
+msgid "Users"
+msgstr ""
