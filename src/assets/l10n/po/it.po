@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+
+#: src/modules/dashboard/top-bar/top-bar.view.html:5
+msgid "Colors"
+msgstr "Colori"
+
+#: src/components/card/card-users.view.html:5
+msgid "Get More Info"
+msgstr "Approfondisci"
+
+#: src/modules/dashboard/top-bar/top-bar.view.html:10
+msgid "Log out"
+msgstr "Logout"
+
+#: src/modules/dashboard/top-bar/top-bar.view.html:8
+msgid "Users"
+msgstr "Utenti"
