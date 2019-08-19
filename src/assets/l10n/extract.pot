@@ -8,6 +8,10 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
+#: ./src/components/card/card-users.view.html:5
+msgid "Get More Info"
+msgstr ""
+
 #: ./src/modules/dashboard/top-bar/top-bar.view.html:10
 msgid "Log out"
 msgstr ""

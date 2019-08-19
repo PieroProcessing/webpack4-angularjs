@@ -30,7 +30,7 @@ function ContentController(contentService, $element /*, resolveList*/) {
         call.then(
             function success(response) {
                 self.listItems = response.data;
-                console.log('response', response)
+                // console.log('response', response)
             },
             function error(error) {
                 console.log('error', error);
@@ -41,16 +41,14 @@ function ContentController(contentService, $element /*, resolveList*/) {
         return self.template == 'users';
     }
     function showSingleItem(item) {
-        console.log('show single item: ', item);
+        // console.log('show single item: ', item);
      
         self.isSelected = !self.isSelected;
         if(self.isSelected){
-            $element.addClass('grid-expanded');
-            $element.removeClass('grid-collapse');
+            // $element.addClass('grid-expanded').removeClass('grid-collapse');
             self.selectedItem = item
         }else{    
-            $element.addClass('grid-collapse');
-            $element.removeClass('grid-expanded');
+            // $element.addClass('grid-collapse').removeClass('grid-expanded');
             self.selectedItem = null;
         }
      
