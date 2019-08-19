@@ -2,7 +2,7 @@
   item-list="contentCtrl.listItems"></card>
 <card template='mondrian' ng-if="!contentCtrl.isUser()" is-selected="contentCtrl.showSingleItem(item)"
   item-list="contentCtrl.listItems"></card>
-<aside ng-if="contentCtrl.isSelected" class="border-light-grey border" style="overflow: scroll">
+<aside ng-if="contentCtrl.isSelected" class="border-light-grey border">
   <side-view class="grid-sideview" selected="contentCtrl.selectedItem">
   </side-view>
 </aside>

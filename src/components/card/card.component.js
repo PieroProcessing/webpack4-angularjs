@@ -9,7 +9,7 @@ const card = {
     controller: cardController,
     controllerAs: 'cardCtrl',
     bindings:{
-        isSelected: '&',
+        isSelected: '&?',
         itemList: '<'
     }
 }

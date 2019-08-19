@@ -6,7 +6,7 @@ function sideviewController($element) {
 
         self.item = (!!self.selected)? self.selected : null;
 
-        console.log('selected', self.isSelected)
+        console.log('selected', self.item)
     }
     self.$onDestroy = () => {
         
