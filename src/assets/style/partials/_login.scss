@@ -2,8 +2,8 @@
     &-wrapper{
         grid-area: login;
         // box-shadow: 3px 3px 1em 0.5em rgb(58, 64, 70);
-        display: grid;
-        grid-template-rows: 1fr 1fr;
+        // display: grid;
+        // grid-template-rows: 1fr 1fr;
         padding: 1em;
         & .form-group{
             display: flex;
