@@ -1,0 +1,16 @@
+<nav class="menu-container">
+    <ul class="menu-list-container">
+        <b class="menu-list-item bg-secondary " style="width:120px;transform: skew(20deg)"></b>
+        <li class="menu-list-item_btn" ng-click="topbarCtrl.goTo('dashboard.content')">
+            <a class="text-white"><i class="far fa-id-card menu-list-icon"></i>{{'Colors' | translate}}</a>
+        </li>
+        <li class="menu-list-item_btn" ng-click="topbarCtrl.goTo('dashboard.users')">
+            <a class="text-white"><i class="fas fa-users menu-list-icon"></i>{{'Users' | translate}}</a></li>
+        <li class="menu-list-item" ng-click="topbarCtrl.logout()">
+            <a class="text-secondary"><i class="fas fa-sign-out-alt"></i> {{'Log out' | translate}}</a>
+        </li>
+        <li class="menu-list-item">
+            <lang-switch></lang-switch>
+        </li>
+    </ul>
+</nav>
